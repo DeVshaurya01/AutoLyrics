@@ -1,0 +1,15 @@
+defaults:
+  - data: nus48e
+  - model: whisper_small
+  - lora: default
+  - training: default
+  - evaluation: default
+
+seed: 42
+
+paths:
+  project_root: ${project_root:}
+  data_raw: ${project_root:}/data/raw/nus-smc-corpus_48
+  data_interim: ${project_root:}/data/interim
+  data_processed: ${project_root:}/data/processed/hf_dataset
+  outputs: ${project_root:}/outputs

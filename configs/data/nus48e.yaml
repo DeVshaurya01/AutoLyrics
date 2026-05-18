@@ -1,0 +1,11 @@
+sample_rate: 16000
+split_policy: speaker_disjoint
+
+train_singers: [ADIZ, JTAN, MCUR, MPOL, MPUR, NJAT, PMAR, ZHIY]
+val_singers:   [SAMF, VKOW]
+test_singers:  [JLEE, KENN]
+
+chunk_target_s: 22.0
+chunk_max_s: 28.0
+chunk_min_s: 3.0
+max_label_length: 448

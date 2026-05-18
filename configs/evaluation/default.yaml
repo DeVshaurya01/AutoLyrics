@@ -1,0 +1,10 @@
+num_beams: 1           # greedy for speed; set to 5 for final paper numbers
+max_new_tokens: 225
+language: english
+task: transcribe
+normalize: true        # Apply EnglishTextNormalizer before computing WER
+report_axes:
+  - overall
+  - per_singer
+  - per_song
+  - sung_vs_spoken

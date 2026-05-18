@@ -1,0 +1,40 @@
+output_dir: outputs/checkpoints
+per_device_train_batch_size: 8
+per_device_eval_batch_size: 4
+gradient_accumulation_steps: 2
+learning_rate: 7.0e-5
+lr_scheduler_type: cosine
+warmup_steps: 100
+num_train_epochs: 25
+max_steps: -1
+
+bf16: true
+fp16: false
+
+eval_strategy: steps
+eval_steps: 50
+save_strategy: steps
+save_steps: 50
+save_total_limit: 3
+load_best_model_at_end: true
+metric_for_best_model: wer
+greater_is_better: false
+
+predict_with_generate: true
+generation_max_length: 225
+
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+# CRITICAL: required for PeftModel compatibility
+remove_unused_columns: false
+label_names: ["labels"]
+
+logging_steps: 10
+report_to: ["tensorboard"]
+run_name: autolyrics-whisper-small-lora
+
+seed: 42
+dataloader_num_workers: 2
+push_to_hub: false

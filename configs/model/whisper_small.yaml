@@ -1,0 +1,5 @@
+model_id: openai/whisper-small
+mel_bins: 80
+max_length: 448
+language: English
+task: transcribe
