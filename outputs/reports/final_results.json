@@ -1,0 +1,5 @@
+{
+  "baseline_wer": 0.21933085501858737,
+  "finetuned_wer": 0.21933085501858737,
+  "relative_wer_reduction_pct": 0.0
+}

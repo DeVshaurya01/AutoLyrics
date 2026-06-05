@@ -1,0 +1,127 @@
+{
+  "overall": {
+    "label": "Overall",
+    "n": 60,
+    "wer_baseline": 0.1872,
+    "wer_finetuned": 0.1771,
+    "wer_rel_pct": 5.38,
+    "cer_baseline": 0.1532,
+    "cer_finetuned": 0.1455,
+    "cer_rel_pct": 5.03
+  },
+  "mode_sing": {
+    "label": "Mode=sing",
+    "n": 41,
+    "wer_baseline": 0.2071,
+    "wer_finetuned": 0.1967,
+    "wer_rel_pct": 5.02,
+    "cer_baseline": 0.1731,
+    "cer_finetuned": 0.1585,
+    "cer_rel_pct": 8.43
+  },
+  "mode_read": {
+    "label": "Mode=read",
+    "n": 19,
+    "wer_baseline": 0.167,
+    "wer_finetuned": 0.1573,
+    "wer_rel_pct": 5.83,
+    "cer_baseline": 0.1332,
+    "cer_finetuned": 0.1324,
+    "cer_rel_pct": 0.59
+  },
+  "by_singer": {
+    "JLEE": {
+      "label": "Singer=JLEE",
+      "n": 33,
+      "wer_baseline": 0.2064,
+      "wer_finetuned": 0.1814,
+      "wer_rel_pct": 12.11,
+      "cer_baseline": 0.1719,
+      "cer_finetuned": 0.1535,
+      "cer_rel_pct": 10.69
+    },
+    "KENN": {
+      "label": "Singer=KENN",
+      "n": 27,
+      "wer_baseline": 0.1661,
+      "wer_finetuned": 0.1724,
+      "wer_rel_pct": -3.76,
+      "cer_baseline": 0.1336,
+      "cer_finetuned": 0.1371,
+      "cer_rel_pct": -2.63
+    }
+  },
+  "by_song": {
+    "04": {
+      "label": "Song=04",
+      "n": 8,
+      "wer_baseline": 0.2418,
+      "wer_finetuned": 0.1648,
+      "wer_rel_pct": 31.82,
+      "cer_baseline": 0.1521,
+      "cer_finetuned": 0.1136,
+      "cer_rel_pct": 25.33
+    },
+    "05": {
+      "label": "Song=05",
+      "n": 9,
+      "wer_baseline": 0.0952,
+      "wer_finetuned": 0.0921,
+      "wer_rel_pct": 3.33,
+      "cer_baseline": 0.0617,
+      "cer_finetuned": 0.0742,
+      "cer_rel_pct": -20.22
+    },
+    "08": {
+      "label": "Song=08",
+      "n": 7,
+      "wer_baseline": 0.3491,
+      "wer_finetuned": 0.2925,
+      "wer_rel_pct": 16.22,
+      "cer_baseline": 0.3106,
+      "cer_finetuned": 0.2444,
+      "cer_rel_pct": 21.3
+    },
+    "10": {
+      "label": "Song=10",
+      "n": 7,
+      "wer_baseline": 0.0473,
+      "wer_finetuned": 0.1331,
+      "wer_rel_pct": -181.25,
+      "cer_baseline": 0.0369,
+      "cer_finetuned": 0.0949,
+      "cer_rel_pct": -157.14
+    },
+    "11": {
+      "label": "Song=11",
+      "n": 7,
+      "wer_baseline": 0.2091,
+      "wer_finetuned": 0.2118,
+      "wer_rel_pct": -1.28,
+      "cer_baseline": 0.1693,
+      "cer_finetuned": 0.1784,
+      "cer_rel_pct": -5.35
+    },
+    "15": {
+      "label": "Song=15",
+      "n": 10,
+      "wer_baseline": 0.1777,
+      "wer_finetuned": 0.1345,
+      "wer_rel_pct": 24.29,
+      "cer_baseline": 0.1498,
+      "cer_finetuned": 0.1197,
+      "cer_rel_pct": 20.07
+    },
+    "17": {
+      "label": "Song=17",
+      "n": 12,
+      "wer_baseline": 0.2008,
+      "wer_finetuned": 0.1916,
+      "wer_rel_pct": 4.58,
+      "cer_baseline": 0.1748,
+      "cer_finetuned": 0.1639,
+      "cer_rel_pct": 6.27
+    }
+  },
+  "song_wins": "5/7 songs improved"
+}

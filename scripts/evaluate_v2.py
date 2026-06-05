@@ -108,12 +108,12 @@ def main():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     lyrics = load_lyrics()
     processor = WhisperProcessor.from_pretrained(
-        "openai/whisper-small", language="English", task="transcribe"
+        "openai/whisper-tiny", language="English", task="transcribe"
     )
 
     # Baseline
     base = WhisperForConditionalGeneration.from_pretrained(
-        "openai/whisper-small", torch_dtype=DTYPE
+        "openai/whisper-tiny", torch_dtype=DTYPE
     ).to(DEVICE).eval()
     base_res = eval_model("Baseline Whisper-small", base, processor, lyrics)
     del base
@@ -123,7 +123,7 @@ def main():
     # Fine-tuned (LoRA merged)
     if ADAPTER.exists():
         ft_base = WhisperForConditionalGeneration.from_pretrained(
-            "openai/whisper-small", torch_dtype=DTYPE
+            "openai/whisper-tiny", torch_dtype=DTYPE
         )
         ft = PeftModel.from_pretrained(ft_base, str(ADAPTER))
         ft = ft.merge_and_unload().to(DEVICE).eval()

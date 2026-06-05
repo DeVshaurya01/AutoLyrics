@@ -21,11 +21,11 @@ ds = load_from_disk("data/processed/hf_dataset")["train"]
 N = 10
 indices = random.sample(range(len(ds)), N)
 
-print(f"Loading baseline whisper-small for sanity-check inference...")
+print(f"Loading baseline whisper-tiny for sanity-check inference...")
 processor = WhisperProcessor.from_pretrained(
-    "openai/whisper-small", language="English", task="transcribe"
+    "openai/whisper-tiny", language="English", task="transcribe"
 )
-model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-small")
+model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-tiny")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = model.to(device).eval()
 

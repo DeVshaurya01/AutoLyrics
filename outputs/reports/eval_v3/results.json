@@ -1,0 +1,18 @@
+{
+  "model_id": "openai/whisper-small",
+  "baseline": {
+    "overall": 0.1849366144668158,
+    "sung": 0.20044543429844097,
+    "spoken": 0.16928838951310862
+  },
+  "finetuned": {
+    "overall": 0.1789709172259508,
+    "sung": 0.19079435783221974,
+    "spoken": 0.16704119850187266
+  },
+  "relative_reduction_pct": {
+    "overall": 3.23,
+    "sung": 4.81,
+    "spoken": 1.33
+  }
+}

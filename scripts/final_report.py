@@ -21,7 +21,7 @@ from transformers import WhisperForConditionalGeneration, WhisperProcessor
 from transformers.models.whisper.english_normalizer import EnglishTextNormalizer
 from peft import PeftModel
 
-MODEL_ID = "openai/whisper-small"
+MODEL_ID = "openai/whisper-tiny"  # adapter in checkpoint-250 was trained on tiny
 ADAPTER = Path("outputs/checkpoints/final_adapter")
 OUT_DIR = Path("outputs/reports/final")
 DATASET = Path("data/processed/hf_dataset")

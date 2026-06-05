@@ -149,9 +149,9 @@ def assign_split(singer: str) -> str | None:
 def main():
     print(f"Loading Whisper-small on {DEVICE}...")
     processor = WhisperProcessor.from_pretrained(
-        "openai/whisper-small", language="English", task="transcribe"
+        "openai/whisper-tiny", language="English", task="transcribe"
     )
-    model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-small")
+    model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-tiny")
     model = model.to(DEVICE).eval()
 
     rows = {"train": [], "val": [], "test": []}

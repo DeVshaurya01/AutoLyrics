@@ -30,7 +30,7 @@ def test_merge_and_unload_does_not_raise(tmp_path):
     from peft import LoraConfig, get_peft_model
 
     base = WhisperForConditionalGeneration.from_pretrained(
-        "openai/whisper-small", torch_dtype=torch.float32
+        "openai/whisper-tiny", torch_dtype=torch.float32
     )
     lora_config = LoraConfig(
         r=4,

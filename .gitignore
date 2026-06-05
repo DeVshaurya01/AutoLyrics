@@ -4,7 +4,8 @@ data/processed/
 data/interim/manifests/
 
 # Outputs
-outputs/
+outputs/checkpoints/
+outputs/wandb/
 checkpoints/
 results/
 

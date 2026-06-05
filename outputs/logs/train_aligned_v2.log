@@ -1,0 +1,454 @@
+C:\Users\shour\OneDrive\Desktop\I FW THIS\CC-AutoLyrics\AutoLyrics\src\autolyrics\training\trainer.py:36: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Seq2SeqTrainer.__init__`. Use `processing_class` instead.
+  trainer = Seq2SeqTrainer(
+============================================================
+AutoLyrics — Training
+LoRA config  : default
+Dataset      : C:\Users\shour\OneDrive\Desktop\I FW THIS\CC-AutoLyrics\AutoLyrics\data\processed\hf_dataset
+Output dir   : C:\Users\shour\OneDrive\Desktop\I FW THIS\CC-AutoLyrics\AutoLyrics\outputs\checkpoints
+============================================================
+trainable params: 884,736 || all params: 242,619,648 || trainable%: 0.3647
+
+[INFO] Starting training...
+  0%|          | 0/550 [00:00<?, ?it/s]C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\transformers\models\whisper\modeling_whisper.py:545: UserWarning: 1Torch was not compiled with flash attention. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\transformers\cuda\sdp_utils.cpp:555.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+  0%|          | 1/550 [00:18<2:51:38, 18.76s/it]  0%|          | 2/550 [00:23<1:34:52, 10.39s/it]  1%|          | 3/550 [00:27<1:10:57,  7.78s/it]  1%|          | 4/550 [00:32<59:31,  6.54s/it]    1%|          | 5/550 [00:37<53:04,  5.84s/it]  1%|1         | 6/550 [00:42<50:13,  5.54s/it]  1%|1         | 7/550 [00:46<47:53,  5.29s/it]  1%|1         | 8/550 [00:51<46:36,  5.16s/it]  2%|1         | 9/550 [00:56<45:58,  5.10s/it]  2%|1         | 10/550 [01:01<45:52,  5.10s/it]                                                  2%|1         | 10/550 [01:01<45:52,  5.10s/it]  2%|2         | 11/550 [01:06<44:43,  4.98s/it]  2%|2         | 12/550 [01:25<1:22:09,  9.16s/it]  2%|2         | 13/550 [01:30<1:11:29,  7.99s/it]  3%|2         | 14/550 [01:35<1:03:26,  7.10s/it]  3%|2         | 15/550 [01:40<57:51,  6.49s/it]    3%|2         | 16/550 [01:45<53:56,  6.06s/it]  3%|3         | 17/550 [01:50<50:58,  5.74s/it]  3%|3         | 18/550 [01:55<49:15,  5.56s/it]  3%|3         | 19/550 [02:00<47:45,  5.40s/it]  4%|3         | 20/550 [02:06<46:47,  5.30s/it]                                                  4%|3         | 20/550 [02:06<46:47,  5.30s/it]  4%|3         | 21/550 [02:11<46:28,  5.27s/it]  4%|4         | 22/550 [02:16<45:07,  5.13s/it]  4%|4         | 23/550 [02:35<1:22:40,  9.41s/it]  4%|4         | 24/550 [02:40<1:10:47,  8.07s/it]  5%|4         | 25/550 [02:45<1:02:48,  7.18s/it]Due to a bug fix in https://github.com/huggingface/transformers/pull/28687 transcription using a multilingual Whisper will default to language detection followed by transcription instead of translation to English.This might be a breaking change for your use case. If you want to instead always translate your audio to English, make sure to pass `language='en'`.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'loss': 1.4786, 'grad_norm': 0.6464099287986755, 'learning_rate': 1.0000000000000002e-06, 'epoch': 0.91}
+{'loss': 1.4162, 'grad_norm': 0.7098681926727295, 'learning_rate': 2.0000000000000003e-06, 'epoch': 1.82}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:23,  2.35s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:13<00:44,  4.91s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:22<00:51,  6.49s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:33<00:56,  8.06s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:40<00:45,  7.64s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [00:45<00:34,  6.85s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [00:51<00:26,  6.57s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [00:57<00:18,  6.32s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:01<00:11,  5.76s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:07<00:05,  5.80s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:13<00:00,  5.88s/it][A                                                  
+                                               [A  5%|4         | 25/550 [04:19<1:02:48,  7.18s/it]
+100%|##########| 12/12 [01:16<00:00,  5.88s/it][A
+                                               [AC:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+  5%|4         | 26/550 [04:26<5:07:36, 35.22s/it]  5%|4         | 27/550 [04:31<3:47:51, 26.14s/it]  5%|5         | 28/550 [04:36<2:52:39, 19.85s/it]  5%|5         | 29/550 [04:41<2:13:40, 15.39s/it]  5%|5         | 30/550 [04:46<1:46:16, 12.26s/it]                                                    5%|5         | 30/550 [04:46<1:46:16, 12.26s/it]  6%|5         | 31/550 [04:51<1:27:46, 10.15s/it]  6%|5         | 32/550 [04:56<1:14:23,  8.62s/it]  6%|6         | 33/550 [05:01<1:04:15,  7.46s/it]  6%|6         | 34/550 [05:20<1:34:25, 10.98s/it]  6%|6         | 35/550 [05:25<1:18:47,  9.18s/it]  7%|6         | 36/550 [05:30<1:07:55,  7.93s/it]  7%|6         | 37/550 [05:35<1:00:30,  7.08s/it]  7%|6         | 38/550 [05:40<55:46,  6.54s/it]    7%|7         | 39/550 [05:46<52:49,  6.20s/it]  7%|7         | 40/550 [05:51<51:08,  6.02s/it]                                                  7%|7         | 40/550 [05:51<51:08,  6.02s/it]  7%|7         | 41/550 [05:57<49:40,  5.85s/it]  8%|7         | 42/550 [06:02<48:03,  5.68s/it]  8%|7         | 43/550 [06:08<47:35,  5.63s/it]  8%|8         | 44/550 [06:12<45:16,  5.37s/it]  8%|8         | 45/550 [06:32<1:21:20,  9.66s/it]  8%|8         | 46/550 [06:37<1:09:54,  8.32s/it]  9%|8         | 47/550 [06:42<1:02:13,  7.42s/it]  9%|8         | 48/550 [06:48<56:57,  6.81s/it]    9%|8         | 49/550 [06:53<53:26,  6.40s/it]  9%|9         | 50/550 [06:59<51:12,  6.15s/it]                                                  9%|9         | 50/550 [06:59<51:12,  6.15s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'eval_loss': 1.2949882745742798, 'eval_wer': 0.342, 'eval_cer': 0.3102, 'eval_wer_ortho': 0.5065, 'eval_cer_ortho': 0.3494, 'eval_runtime': 94.3815, 'eval_samples_per_second': 0.509, 'eval_steps_per_second': 0.127, 'epoch': 2.27}
+{'loss': 1.4995, 'grad_norm': 0.8307303786277771, 'learning_rate': 3e-06, 'epoch': 2.73}
+{'loss': 1.4059, 'grad_norm': 0.7611927390098572, 'learning_rate': 4.000000000000001e-06, 'epoch': 3.64}
+{'loss': 1.4998, 'grad_norm': 0.6209163069725037, 'learning_rate': 5e-06, 'epoch': 4.55}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:24,  2.48s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:14<00:50,  5.60s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:24<00:57,  7.13s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:34<00:57,  8.22s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:42<00:47,  7.89s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [00:47<00:35,  7.09s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [00:53<00:27,  6.75s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [01:20<00:39, 13.08s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:25<00:20, 10.42s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:31<00:09,  9.08s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:37<00:00,  8.25s/it][A                                                
+                                               [A  9%|9         | 50/550 [08:57<51:12,  6.15s/it]
+100%|##########| 12/12 [01:40<00:00,  8.25s/it][A
+                                               [AC:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+  9%|9         | 51/550 [09:03<5:45:42, 41.57s/it]  9%|9         | 52/550 [09:08<4:13:59, 30.60s/it] 10%|9         | 53/550 [09:13<3:09:36, 22.89s/it] 10%|9         | 54/550 [09:18<2:25:21, 17.58s/it] 10%|#         | 55/550 [09:23<1:52:32, 13.64s/it] 10%|#         | 56/550 [09:42<2:05:53, 15.29s/it] 10%|#         | 57/550 [09:47<1:40:20, 12.21s/it] 11%|#         | 58/550 [09:52<1:22:27, 10.06s/it] 11%|#         | 59/550 [09:57<1:10:51,  8.66s/it] 11%|#         | 60/550 [10:03<1:02:53,  7.70s/it]                                                   11%|#         | 60/550 [10:03<1:02:53,  7.70s/it] 11%|#1        | 61/550 [10:08<56:56,  6.99s/it]   11%|#1        | 62/550 [10:13<53:12,  6.54s/it] 11%|#1        | 63/550 [10:19<49:58,  6.16s/it] 12%|#1        | 64/550 [10:25<49:03,  6.06s/it] 12%|#1        | 65/550 [10:30<47:07,  5.83s/it] 12%|#2        | 66/550 [10:35<44:41,  5.54s/it] 12%|#2        | 67/550 [10:54<1:18:45,  9.78s/it] 12%|#2        | 68/550 [11:00<1:07:22,  8.39s/it] 13%|#2        | 69/550 [11:05<59:12,  7.39s/it]   13%|#2        | 70/550 [11:10<54:54,  6.86s/it]                                                 13%|#2        | 70/550 [11:10<54:54,  6.86s/it] 13%|#2        | 71/550 [11:15<50:40,  6.35s/it] 13%|#3        | 72/550 [11:21<48:16,  6.06s/it] 13%|#3        | 73/550 [11:26<46:54,  5.90s/it] 13%|#3        | 74/550 [11:32<45:20,  5.72s/it] 14%|#3        | 75/550 [11:37<43:57,  5.55s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'eval_loss': 1.2617342472076416, 'eval_wer': 0.3529, 'eval_cer': 0.341, 'eval_wer_ortho': 0.6384, 'eval_cer_ortho': 0.4034, 'eval_runtime': 118.1542, 'eval_samples_per_second': 0.406, 'eval_steps_per_second': 0.102, 'epoch': 4.55}
+{'loss': 1.3535, 'grad_norm': 0.8149788975715637, 'learning_rate': 6e-06, 'epoch': 5.45}
+{'loss': 1.573, 'grad_norm': 0.8351069688796997, 'learning_rate': 7e-06, 'epoch': 6.36}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:23,  2.35s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:13<00:46,  5.12s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:23<00:54,  6.87s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:51<01:39, 14.17s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:58<01:10, 11.78s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [01:03<00:48,  9.67s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [01:10<00:34,  8.68s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [01:15<00:23,  7.67s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:19<00:13,  6.63s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:26<00:06,  6.54s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:32<00:00,  6.38s/it][A                                                
+                                               [A 14%|#3        | 75/550 [13:31<43:57,  5.55s/it]
+100%|##########| 12/12 [01:35<00:00,  6.38s/it][A
+                                               [AC:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+ 14%|#3        | 76/550 [13:36<5:14:27, 39.80s/it] 14%|#4        | 77/550 [13:41<3:50:34, 29.25s/it] 14%|#4        | 78/550 [14:00<3:26:28, 26.25s/it] 14%|#4        | 79/550 [14:06<2:36:43, 19.97s/it] 15%|#4        | 80/550 [14:11<2:01:45, 15.54s/it]                                                   15%|#4        | 80/550 [14:11<2:01:45, 15.54s/it] 15%|#4        | 81/550 [14:16<1:37:01, 12.41s/it] 15%|#4        | 82/550 [14:21<1:19:49, 10.23s/it] 15%|#5        | 83/550 [14:26<1:08:02,  8.74s/it] 15%|#5        | 84/550 [14:32<1:00:32,  7.79s/it] 15%|#5        | 85/550 [14:37<55:03,  7.10s/it]   16%|#5        | 86/550 [14:43<50:51,  6.58s/it] 16%|#5        | 87/550 [14:48<47:36,  6.17s/it] 16%|#6        | 88/550 [14:53<44:34,  5.79s/it] 16%|#6        | 89/550 [15:15<1:22:01, 10.68s/it] 16%|#6        | 90/550 [15:20<1:09:39,  9.09s/it]                                                   16%|#6        | 90/550 [15:20<1:09:39,  9.09s/it] 17%|#6        | 91/550 [15:25<1:00:18,  7.88s/it] 17%|#6        | 92/550 [15:31<54:02,  7.08s/it]   17%|#6        | 93/550 [15:36<49:25,  6.49s/it] 17%|#7        | 94/550 [15:41<47:22,  6.23s/it] 17%|#7        | 95/550 [15:47<45:46,  6.04s/it] 17%|#7        | 96/550 [15:53<44:31,  5.88s/it] 18%|#7        | 97/550 [15:58<43:49,  5.80s/it] 18%|#7        | 98/550 [16:03<42:36,  5.66s/it] 18%|#8        | 99/550 [16:08<40:15,  5.36s/it] 18%|#8        | 100/550 [16:29<1:14:38,  9.95s/it]                                                    18%|#8        | 100/550 [16:29<1:14:38,  9.95s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'eval_loss': 1.2870399951934814, 'eval_wer': 0.3122, 'eval_cer': 0.381, 'eval_wer_ortho': 0.4634, 'eval_cer_ortho': 0.4164, 'eval_runtime': 113.9037, 'eval_samples_per_second': 0.421, 'eval_steps_per_second': 0.105, 'epoch': 6.82}
+{'loss': 1.4799, 'grad_norm': 0.8159988522529602, 'learning_rate': 8.000000000000001e-06, 'epoch': 7.27}
+{'loss': 1.3516, 'grad_norm': 0.9945233464241028, 'learning_rate': 9e-06, 'epoch': 8.18}
+{'loss': 1.3562, 'grad_norm': 0.7720520496368408, 'learning_rate': 1e-05, 'epoch': 9.09}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:21,  2.13s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:12<00:43,  4.83s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:22<00:53,  6.67s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:32<00:54,  7.81s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:39<00:45,  7.52s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [00:44<00:33,  6.74s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [00:50<00:26,  6.58s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [00:57<00:19,  6.55s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:02<00:12,  6.11s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:09<00:06,  6.26s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:16<00:00,  6.50s/it][A                                                   
+                                               [A 18%|#8        | 100/550 [18:05<1:14:38,  9.95s/it]
+100%|##########| 12/12 [01:19<00:00,  6.50s/it][A
+                                               [AC:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+ 18%|#8        | 101/550 [18:11<4:41:51, 37.66s/it] 19%|#8        | 102/550 [18:16<3:28:00, 27.86s/it] 19%|#8        | 103/550 [18:21<2:36:55, 21.06s/it] 19%|#8        | 104/550 [18:27<2:01:19, 16.32s/it] 19%|#9        | 105/550 [18:32<1:36:50, 13.06s/it] 19%|#9        | 106/550 [18:37<1:19:24, 10.73s/it] 19%|#9        | 107/550 [18:43<1:07:41,  9.17s/it] 20%|#9        | 108/550 [18:48<58:34,  7.95s/it]   20%|#9        | 109/550 [18:53<52:21,  7.12s/it] 20%|##        | 110/550 [18:58<47:10,  6.43s/it]                                                  20%|##        | 110/550 [18:58<47:10,  6.43s/it] 20%|##        | 111/550 [19:18<1:16:57, 10.52s/it] 20%|##        | 112/550 [19:23<1:05:03,  8.91s/it] 21%|##        | 113/550 [19:28<56:46,  7.79s/it]   21%|##        | 114/550 [19:34<51:22,  7.07s/it] 21%|##        | 115/550 [19:39<47:18,  6.52s/it] 21%|##1       | 116/550 [19:45<45:27,  6.29s/it] 21%|##1       | 117/550 [19:50<43:10,  5.98s/it] 21%|##1       | 118/550 [19:56<42:03,  5.84s/it] 22%|##1       | 119/550 [20:01<41:36,  5.79s/it] 22%|##1       | 120/550 [20:07<40:33,  5.66s/it]                                                  22%|##1       | 120/550 [20:07<40:33,  5.66s/it] 22%|##2       | 121/550 [20:11<38:57,  5.45s/it] 22%|##2       | 122/550 [20:31<1:09:56,  9.80s/it] 22%|##2       | 123/550 [20:37<59:38,  8.38s/it]   23%|##2       | 124/550 [20:42<52:38,  7.41s/it] 23%|##2       | 125/550 [20:47<47:55,  6.77s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'eval_loss': 1.2559462785720825, 'eval_wer': 0.3555, 'eval_cer': 0.3226, 'eval_wer_ortho': 0.5017, 'eval_cer_ortho': 0.3557, 'eval_runtime': 96.3327, 'eval_samples_per_second': 0.498, 'eval_steps_per_second': 0.125, 'epoch': 9.09}
+{'loss': 1.4427, 'grad_norm': 0.7696688175201416, 'learning_rate': 9.987820251299121e-06, 'epoch': 10.0}
+{'loss': 1.3647, 'grad_norm': 1.0386370420455933, 'learning_rate': 9.951340343707852e-06, 'epoch': 10.91}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:23,  2.39s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:13<00:44,  4.95s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:22<00:52,  6.54s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:32<00:54,  7.81s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:59<01:25, 14.26s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [01:05<00:56, 11.30s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [01:10<00:38,  9.60s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [01:16<00:25,  8.38s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:20<00:14,  7.15s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:26<00:06,  6.78s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:33<00:00,  6.63s/it][A                                                 
+                                               [A 23%|##2       | 125/550 [22:42<47:55,  6.77s/it]
+100%|##########| 12/12 [01:36<00:00,  6.63s/it][A
+                                               [AC:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\bitsandbytes\autograd\_functions.py:316: UserWarning: MatMul8bitLt: inputs will be cast from torch.bfloat16 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+C:\Users\shour\anaconda3\Lib\site-packages\torch\utils\checkpoint.py:1399: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with device_autocast_ctx, torch.cpu.amp.autocast(**cpu_autocast_kwargs), recompute_context:  # type: ignore[attr-defined]
+ 23%|##2       | 126/550 [22:48<4:49:39, 40.99s/it] 23%|##3       | 127/550 [22:53<3:33:06, 30.23s/it] 23%|##3       | 128/550 [22:58<2:39:20, 22.66s/it] 23%|##3       | 129/550 [23:03<2:01:55, 17.38s/it] 24%|##3       | 130/550 [23:08<1:36:05, 13.73s/it]                                                    24%|##3       | 130/550 [23:08<1:36:05, 13.73s/it] 24%|##3       | 131/550 [23:14<1:18:40, 11.27s/it] 24%|##4       | 132/550 [23:19<1:05:15,  9.37s/it] 24%|##4       | 133/550 [23:39<1:27:17, 12.56s/it] 24%|##4       | 134/550 [23:44<1:11:32, 10.32s/it] 25%|##4       | 135/550 [23:49<1:01:02,  8.82s/it] 25%|##4       | 136/550 [23:54<53:42,  7.78s/it]   25%|##4       | 137/550 [24:00<48:29,  7.04s/it] 25%|##5       | 138/550 [24:05<45:31,  6.63s/it] 25%|##5       | 139/550 [24:11<43:01,  6.28s/it] 25%|##5       | 140/550 [24:16<40:59,  6.00s/it]                                                  25%|##5       | 140/550 [24:16<40:59,  6.00s/it] 26%|##5       | 141/550 [24:22<40:06,  5.88s/it] 26%|##5       | 142/550 [24:27<38:28,  5.66s/it] 26%|##6       | 143/550 [24:32<36:36,  5.40s/it] 26%|##6       | 144/550 [24:52<1:06:15,  9.79s/it] 26%|##6       | 145/550 [24:57<57:25,  8.51s/it]   27%|##6       | 146/550 [25:03<51:08,  7.59s/it] 27%|##6       | 147/550 [25:08<46:41,  6.95s/it] 27%|##6       | 148/550 [25:13<43:13,  6.45s/it] 27%|##7       | 149/550 [25:19<40:47,  6.10s/it] 27%|##7       | 150/550 [25:24<39:15,  5.89s/it]                                                  27%|##7       | 150/550 [25:24<39:15,  5.89s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+{'eval_loss': 1.235744595527649, 'eval_wer': 0.3426, 'eval_cer': 0.4173, 'eval_wer_ortho': 0.4846, 'eval_cer_ortho': 0.4502, 'eval_runtime': 114.8439, 'eval_samples_per_second': 0.418, 'eval_steps_per_second': 0.104, 'epoch': 11.36}
+{'loss': 1.42, 'grad_norm': 0.9416875839233398, 'learning_rate': 9.890738003669029e-06, 'epoch': 11.82}
+{'loss': 1.4831, 'grad_norm': 0.8495411276817322, 'learning_rate': 9.806308479691595e-06, 'epoch': 12.73}
+{'loss': 1.3812, 'grad_norm': 0.8980082273483276, 'learning_rate': 9.698463103929542e-06, 'epoch': 13.64}
+
+  0%|          | 0/12 [00:00<?, ?it/s][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 17%|#6        | 2/12 [00:04<00:22,  2.25s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 25%|##5       | 3/12 [00:14<00:48,  5.37s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 33%|###3      | 4/12 [00:24<00:56,  7.09s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 42%|####1     | 5/12 [00:34<00:57,  8.26s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 50%|#####     | 6/12 [00:42<00:47,  7.96s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 58%|#####8    | 7/12 [00:47<00:35,  7.14s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 67%|######6   | 8/12 [00:53<00:27,  6.82s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 75%|#######5  | 9/12 [01:00<00:20,  6.84s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 83%|########3 | 10/12 [01:05<00:12,  6.14s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+ 92%|#########1| 11/12 [01:11<00:06,  6.14s/it][ATrainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+
+100%|##########| 12/12 [01:17<00:00,  6.18s/it][A                                                 
+                                               [A 27%|##7       | 150/550 [27:03<39:15,  5.89s/it]
+100%|##########| 12/12 [01:20<00:00,  6.18s/it][A
+                                               [A                                                  27%|##7       | 150/550 [27:04<39:15,  5.89s/it] 27%|##7       | 150/550 [27:04<1:12:12, 10.83s/it]
+{'eval_loss': 1.2103300094604492, 'eval_wer': 0.3154, 'eval_cer': 0.2878, 'eval_wer_ortho': 0.4846, 'eval_cer_ortho': 0.3259, 'eval_runtime': 99.1186, 'eval_samples_per_second': 0.484, 'eval_steps_per_second': 0.121, 'epoch': 13.64}
+{'train_runtime': 1624.733, 'train_samples_per_second': 5.293, 'train_steps_per_second': 0.339, 'train_loss': 1.4337302525838216, 'epoch': 13.64}
+
+[DONE] Adapter saved to C:\Users\shour\OneDrive\Desktop\I FW THIS\CC-AutoLyrics\AutoLyrics\outputs\checkpoints\final_adapter

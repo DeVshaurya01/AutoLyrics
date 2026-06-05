@@ -247,6 +247,8 @@ def main():
         if split is None:
             continue
         for mode in ("sing", "read"):
+            if split == "test" and mode == "read":
+                continue
             mode_dir = singer_dir / mode
             if not mode_dir.is_dir():
                 continue

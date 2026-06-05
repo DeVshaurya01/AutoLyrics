@@ -53,23 +53,23 @@ def load_audio_16k(path: Path) -> np.ndarray:
     return wav.squeeze(0).numpy().astype("float32")
 
 
-def load_words(json_path: Path) -> list[dict]:
-    """Returns [{word, start, end}, ...] from JamendoLyrics word JSON."""
-    data = json.loads(json_path.read_text(encoding="utf-8"))
-    words = []
-    # Format varies by jamendolyrics version — handle both
-    if isinstance(data, dict) and "words" in data:
-        items = data["words"]
-    elif isinstance(data, list):
-        items = data
-    else:
+def load_words(csv_path: Path) -> list[dict]:
+    """Returns [{word, start, end}, ...] from JamendoLyrics CSV and TXT."""
+    words_txt_path = csv_path.parent.parent.parent / "lyrics" / f"{csv_path.stem}.words.txt"
+    if not words_txt_path.exists():
+        words_txt_path = next(csv_path.parents[3].rglob(f"{csv_path.stem}.words.txt"), None)
+    if not words_txt_path:
         return []
-    for w in items:
-        text = w.get("text") or w.get("word") or ""
-        start = w.get("start") or w.get("time", 0.0)
-        end = w.get("end") or (start + w.get("duration", 0.0))
-        if text and end > start:
-            words.append({"word": text, "start": float(start), "end": float(end)})
+    lines_csv = csv_path.read_text(encoding="utf-8").strip().split('\n')
+    lines_txt = words_txt_path.read_text(encoding="utf-8").strip().split('\n')
+    words = []
+    csv_rows = lines_csv[1:]
+    for row, txt in zip(csv_rows, lines_txt):
+        parts = row.split(',')
+        if len(parts) >= 2:
+            start = float(parts[0])
+            end = float(parts[1])
+            words.append({"word": txt.strip(), "start": start, "end": end})
     return words
 
 
@@ -107,19 +107,16 @@ def chunk_song(audio: np.ndarray, words: list[dict]) -> list[dict]:
 
 
 def find_word_json(song_dir: Path, song_name: str) -> Path | None:
-    """Find the word-level JSON for a song — layout varies by repo version."""
+    """Find the word-level CSV for a song."""
     candidates = [
-        song_dir / "annotations" / "words" / f"{song_name}.json",
-        song_dir / "lyrics" / f"{song_name}.json",
-        song_dir / "words" / f"{song_name}.json",
-        song_dir / f"{song_name}.json",
+        song_dir / "annotations" / "words" / f"{song_name}.csv",
     ]
     for c in candidates:
         if c.exists():
             return c
-    # Search anywhere in the repo
-    for p in song_dir.rglob(f"{song_name}.json"):
-        return p
+    for p in song_dir.rglob(f"{song_name}.csv"):
+        if "words" in p.parts:
+            return p
     return None
 
 
