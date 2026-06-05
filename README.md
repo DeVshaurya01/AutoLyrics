@@ -195,6 +195,8 @@ Beyond the four `make` targets, [scripts/](scripts/) contains:
 
 ## Demo
 
+**[Watch the AutoLyrics Demo Video](https://drive.google.com/file/d/1UuEqjQFU5i8JaYTTbLc3j-4MX12PD-gM/view)**
+
 ```bash
 make demo   # or: python app.py
 ```
